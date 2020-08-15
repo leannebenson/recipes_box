@@ -1,0 +1,8 @@
+<div class="container">
+    {% if not author %}
+        <h1>The author you are looking for doesn't exist!</h1>
+    {% else %}
+        <h2>{{ author.name }}</h2>
+        <p>{{ author.bio }}<p>
+    {% endif %}
+</div>
