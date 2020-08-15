@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Recipes</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+            {{recipe.title}} - by{{ recipe.author.name }}
+                <ul>
+                    <li>
+                        {{ recipe.description }}
+                    </li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
