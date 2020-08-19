@@ -21,16 +21,8 @@ def author_detail(request, author_id):
 def recipe_form_view(request):
     if request.method == "POST":
         form = AddRecipe(request.POST)
-        if form.is_valid():
-            data = form.cleaned_data
-            Recipe.objects.create(
-                title=data.get('title'),
-                author=data.get('author'),
-                description=data.get('description'),
-                time_required=data.get('time_required'),
-                instructions=data.get('instrustions'),
-            )
-            return HttpResponseRedirect(reverse("homepage"))
+        form.save()
+        return HttpResponseRedirect(reverse("homepage"))
     
     form = AddRecipe()
     return render(request, "generic_form.html", {"form": form})
