@@ -1,14 +1,12 @@
 <div class="container">
     <h1>Recipes</h1>
+    <h2>Am i authenticated? {{ request.user.is_authenticated }}</h2>
+    {% if request.user.is_authenticated %}
+        <h3>Welcome, {{ request.user.author.name }}!</h3>
     <ul>
         {% for recipe in recipes %}
             <li>
             <a href="/recipe/{{ recipe.id }}/">{{recipe.title}}</a> - by <a href="/author/{{ author.id }}">{{ recipe.author.name }}</a>
-                <ul>
-                    <li>
-                        {{ recipe.description }}
-                    </li>
-                </ul>
             </li>
         {% endfor %}
     </ul>
