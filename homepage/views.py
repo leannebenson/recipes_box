@@ -10,6 +10,7 @@ from homepage.forms import AddRecipe, AddAuthor, LoginForm, SignupForm
 
 def index(request):
     my_recipes = Recipe.objects.all()
+    print(my_recipes)
     return render(request, "index.html", {"recipes": my_recipes})
 
 

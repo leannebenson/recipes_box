@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: recipebox
+Version: 0.1.0
+Summary: This is a reciped list
+Home-page: UNKNOWN
+Author: Cory Schlaudecker
+Author-email: cory.schlaudecker@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8,<4.0
